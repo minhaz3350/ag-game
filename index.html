@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG GAME Token ($AG) - The Future of Gaming</title>
+    <style>
+        /* --- AWESOME CYBERPUNK THEME CSS --- */
+        :root {
+            --primary: #00ffcc; /* Neon Cyan */
+            --accent: #ff00ff;  /* Neon Magenta */
+            --bg-dark: #0a0a12; /* Deep Dark Blue */
+            --bg-light: #1a1a2e; /* Lighter Dark Blue */
+            --text: #e0e0ff;    /* Soft Blue-White */
+            --glow: 0 0 15px rgba(0, 255, 204, 0.7); /* Cyan Glow */
+        }
+
+        body {
+            font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(rgba(10, 10, 18, 0.9), rgba(10, 10, 18, 0.9)),
+                url('https://placehold.co/1920x1080/0a0a12/00ffcc?text=CIRCUIT+PATTERN'); /* Replace with subtle circuit background */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        header {
+            padding: 120px 20px;
+            background: radial-gradient(circle at center, var(--bg-light) 0%, var(--bg-dark) 80%);
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 5px 20px rgba(0, 255, 204, 0.2);
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--primary);
+            text-shadow: 0 0 10px var(--primary), 0 0 20px var(--accent);
+        }
+
+        .ticker {
+            color: var(--accent);
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        /* AG GAME LOGO */
+        .logo-container {
+            margin-bottom: 30px;
+            animation: pulse 3s infinite alternate;
+        }
+
+        .logo-img {
+            width: 250px;
+            height: auto;
+            filter: drop-shadow(0 0 15px var(--primary));
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); filter: drop-shadow(0 0 15px var(--primary)); }
+            100% { transform: scale(1.05); filter: drop-shadow(0 0 30px var(--primary)); }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            margin: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--bg-dark);
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px var(--primary), 0 0 50px var(--accent);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: inset 0 0 10px var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            box-shadow: 0 0 30px var(--primary);
+        }
+
+        /* The "Copy Address" Trick */
+        .ca-box {
+            background: rgba(26, 26, 46, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            max-width: 90%;
+            border: 1px solid var(--primary);
+            box-shadow: var(--glow);
+            backdrop-filter: blur(5px);
+        }
+
+        .ca-text {
+            font-family: 'Courier New', monospace;
+            color: var(--primary);
+            margin-right: 15px;
+            font-size: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            letter-spacing: 1px;
+        }
+
+        /* Tokenomics Section */
+        .section {
+            padding: 80px 20px;
+            border-bottom: 1px solid #222;
+            background-color: rgba(10, 10, 18, 0.7);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 3rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px var(--primary);
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(10, 10, 18, 0.9));
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--primary);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+             transform: translateY(-10px);
+             box-shadow: 0 0 30px rgba(0, 255, 204, 0.6);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            color: var(--accent);
+            font-weight: bold;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px;
+            font-size: 0.9rem;
+            color: #888;
+            background: var(--bg-light);
+            border-top: 2px solid var(--primary);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .logo-img { width: 180px; }
+            .ca-box { flex-direction: column; }
+            .btn { width: 90%; margin: 10px auto; display: block; }
+            .stat-number { font-size: 2.5rem; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="image_0.png" alt="AG GAME Logo" class="logo-img">
+            </div>
+            <h1>AG GAME</h1>
+            <div class="ticker">$AG</div>
+            
+            <p style="max-width: 700px; margin: 25px auto; color: var(--text); font-size: 1.2rem;">
+                The ultimate gaming meme token powering the next generation of decentralized play. 
+                Join the revolution. Level up your portfolio.
+            </p>
+
+            <div>
+                <a href="#" class="btn">Buy $AG Now</a>
+                <a href="#" class="btn btn-secondary">Join Telegram</a>
+            </div>
+
+            <div class="ca-box">
+                <span class="ca-text" id="caText">0xABCDEF1234567890ABCDEF1234567890ABCDEF12</span>
+                <button class="btn" style="padding: 8px 25px; font-size: 0.9rem; margin: 0;" onclick="copyCA()">COPY CA</button>
+            </div>
+            <div id="copy-feedback" style="color: var(--primary); font-size: 1rem; margin-top: 10px; height: 20px; text-shadow: 0 0 5px var(--primary);"></div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Tokenomics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10B</div>
+                    <div>Total Supply</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0%</div>
+                    <div>Buy/Sell Tax</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">LOCKED</div>
+                    <div>Liquidity Pool</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2>Mission Roadmap</h2>
+            <ul style="list-style: none; padding: 0; text-align: left; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+                <li style="margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--primary);">✅ <b>Stage 1:</b> Stealth Launch & Community Formation</li>
+                <li style="margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--accent);">🚀 <b>Stage 2:</b> CoinGecko/CMC Listing & 5,000 Holders</li>
+                <li style="margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--primary);">🎮 <b>Stage 3:</b> AG Game Beta Launch & Partnerships</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Disclaimer: $AG is a community-driven project for entertainment and gaming utility. It is not financial advice. Do your own research.</p>
+        <p>&copy; 2025 AG GAME. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function copyCA() {
+            // Replace this with your actual contract address
+            const ca = "0xABCDEF1234567890ABCDEF1234567890ABCDEF12"; 
+            
+            navigator.clipboard.writeText(ca).then(() => {
+                const feedback = document.getElementById("copy-feedback");
+                feedback.textContent = "Address Copied to Clipboard!";
+                setTimeout(() => {
+                    feedback.textContent = "";
+                }, 2500);
+            });
+        }
+    </script>
+
+</body>
+</html>
